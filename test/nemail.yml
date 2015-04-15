@@ -1,0 +1,39 @@
+# File location
+input: ./test.html
+output: email.html
+
+# Metadatas
+title: Nemail - Test emailing
+imagesUrl: ~
+defaultBgColor: '#ffffff'
+responsive: false
+linkTarget: _blank
+
+# Default CSS
+## CSS for table element
+tableCss:
+  border-collapse: separate
+  border-spacing: 0
+  display: table
+
+## CSS for text elements (span,p, etc)
+textCss:
+  font-family: Verdana
+  font-size: 16px
+  margin-top: 0px
+  margin-bottom: 0px
+  color: '#534f4d'
+  font-weight: 300
+  
+## CSS for a elements
+linkCss:
+  text-decoration: none
+  
+# Used classes
+classes:
+  title:
+    font-weight: bold
+    font-size: 20px
+    
+  white:
+    font-size: 25px
