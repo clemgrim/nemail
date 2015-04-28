@@ -8,7 +8,7 @@ imagesUrl: ~
 defaultBgColor: '#ffffff'
 responsive: <%= responsive %>
 linkTarget: _blank
-autoClass: false
+addClass: false
 
 # Default CSS
 ## CSS for table element
