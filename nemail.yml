@@ -9,6 +9,8 @@ defaultBgColor: '#ffffff'
 responsive: <%= responsive %>
 linkTarget: _blank
 addClass: false
+compressHtml: true
+compressCss: true
 
 # Default CSS
 ## CSS for table element
