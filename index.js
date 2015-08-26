@@ -68,7 +68,9 @@ switch (method) {
 		break;
 		
 	default:
-		throw new Error('Commande inconnue.');
+		console.log(chalk.red('Unknown command'));
+		yargs.showHelp();
+		process.exit(0);
 		break;
 }
 
