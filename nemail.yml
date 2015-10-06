@@ -6,6 +6,7 @@ output: <%= output %>
 title: <%= title %>
 imagesUrl: ~
 defaultBgColor: '#ffffff'
+bodyBgColor: '#ffffff'
 responsive: <%= responsive %>
 linkTarget: _blank
 addClass: false
