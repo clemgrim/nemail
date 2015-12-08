@@ -43,23 +43,15 @@ switch (method) {
 		
 	case 'watch':
 		nemail.process(config);
-		
-		fs.watch(path.dirname(config.input), _.debounce(function (event, file) {
-			if (path.basename(file) == path.basename(config.output)) {
-				return;
-			}
-			
-			if ('change' === event) {
-				var ext = path.extname(file);
 
-				// reset the config
-				if ('.yml' === ext) {
-					config = nemail.loadConfig(argv);
-				}
-				
-				nemail.process(config);
-			}
+        fs.watch(config.input, _.debounce(function () {
+            nemail.process(config);
 		}, 150));
+
+        fs.watch(path.dirname(config.input) + '/nemail.yml', _.debounce(function () {
+            config = nemail.loadConfig(argv);
+            nemail.process(config);
+        }, 150));
 		
 		break;
 		
